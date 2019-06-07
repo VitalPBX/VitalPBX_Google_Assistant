@@ -25,7 +25,32 @@ echo -e "\n"
 echo -e "************************************************************"
 echo -e "*                 Generate credentials                     *"
 echo -e "************************************************************"
-python -m pip install --upgrade google-auth-oauthlib[tool]
+echo -e "\n"
+echo -e "************************************************************"
+echo -e "*                        Copy Files                        *"
+echo -e "************************************************************"
+cd /var/lib/asterisk/agi-bin
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google.agi
+chown asterisk:asterisk google.agi
+cd /etc/asterisk/ombutel
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/extensions__60-google_assistant.conf
+cd /var/lib/asterisk/sounds/en
+wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_another.sln
+wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_example.sln
+wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_goodbye.sln
+wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_wait.sln
+wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_welcome.sln
+echo -e "\n"
+echo -e "************************************************************"
+echo -e "*     Create working directory and allow asterisk user     *"
+echo -e "************************************************************"
+mkdir /var/lib/asterisk/.config/
+chown asterisk:asterisk /var/lib/asterisk/.config/
+echo -e "\n"
+echo -e "************************************************************"
+echo -e "*                VitalPBX Dialplan realod                   *"
+echo -e "************************************************************"
+asterisk -rx”dialplan reload”
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*                        Finish                             *"
