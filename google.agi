@@ -65,7 +65,7 @@ my $tmpname    = "$tmpdir/google_audio$$";
 my $sox        = "/usr/bin/sox";
 my $format     = "wav";
 my $command    = "/usr/bin/googlesamples-assistant-pushtotalk";
-my $oauth_dir  = "/var/lib/asterisk/agi-bin";
+my $oauth_dir  = "/var/lib/asterisk";
 my $api_json_file = "$oauth_dir/credentials.json";
 my $thank	= "/var/lib/asterisk/sounds/en/auth-thankyou";
 
