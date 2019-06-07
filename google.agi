@@ -67,7 +67,7 @@ my $format     = "wav";
 my $command    = "/usr/bin/googlesamples-assistant-pushtotalk";
 my $oauth_dir  = "/var/lib/asterisk";
 my $api_json_file = "$oauth_dir/credentials.json";
-my $thank	= "/var/lib/asterisk/sounds/en/auth-thankyou";
+my $thank	= "/var/lib/asterisk/sounds/en/google_wait";
 
 # Store AGI input #
 ($AGI{arg_1}, $AGI{arg_2}, $AGI{arg_3}, $AGI{arg_4}) = @ARGV;
