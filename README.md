@@ -120,6 +120,7 @@ Copy google.agi file<br>
 [root@vitalpbx /]# cd /var/lib/asterisk/agi-bin
 [root@vitalpbx agi-bin]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google.agi
 [root@vitalpbx agi-bin]# chown asterisk:asterisk google.agi
+[root@vitalpbx agi-bin]# chmod +x google.agi
 </pre>
 
 ## GET project-id and device-model-id<br>
@@ -143,7 +144,6 @@ my $projectid = "your-project-id";
 my $devicemodelid = "your-device-model-id";
 
 # ----------------------------- #
-[root@vitalpbx agi-bin]# chmod +x google.agi
 </pre>
 
 ## Load Example code<br>
@@ -151,7 +151,7 @@ my $devicemodelid = "your-device-model-id";
 <pre>
 [root@vitalpbx ]#  cd /etc/asterisk/ombutel
 [root@vitalpbx ombutel]#  wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/extensions__60-google_assistant.conf
-[root@vitalpbx ombutel]#  asterisk -rx”dialplan reload”
+[root@vitalpbx ombutel]#  asterisk -rx"dialplan reload"
 [root@vitalpbx ombutel]#  cd /var/lib/asterisk/sounds/en
 [root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_another.sln?raw=true
 [root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_example.sln?raw=true
