@@ -153,11 +153,11 @@ my $devicemodelid = "your-device-model-id";
 [root@vitalpbx ombutel]#  wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/extensions__60-google_assistant.conf
 [root@vitalpbx ombutel]#  asterisk -rx"dialplan reload"
 [root@vitalpbx ombutel]#  cd /var/lib/asterisk/sounds/en
-[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_another.sln?raw=true
-[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_example.sln?raw=true
-[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_goodbye.sln?raw=true
-[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_wait.sln?raw=true
-[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_welcome.sln?raw=true
+[root@vitalpbx en]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_another.sln
+[root@vitalpbx en]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_example.sln
+[root@vitalpbx en]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_goodbye.sln
+[root@vitalpbx en]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_wait.sln
+[root@vitalpbx en]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_welcome.sln
 [root@vitalpbx en]# mkdir /var/lib/asterisk/.config/
 [root@vitalpbx en]# chown asterisk:asterisk /var/lib/asterisk/.config/
 </pre>
