@@ -76,24 +76,22 @@ Copy this file (client_secret_<client-id>.json) in VitalPBX Server /var/lib/aste
 
 ## Install the SDK and Sample Code<br>
 <pre>
-[root@vitalpbx /]# yum install -y python-devel python-virtualenv
-[root@vitalpbx /]# virtualenv env --no-site-packages
-[root@vitalpbx /]# env/bin/python -m pip install --upgrade pip setuptools wheel
-[root@vitalpbx /]# source env/bin/activate
+[root@vitalpbx /]# yum install -y python-devel python-pip
+[root@vitalpbx /]# python -m pip install --upgrade pip setuptools wheel
 </pre>
 
 Install the package's system dependencies<br>
 <pre>
-(env) [root@vitalpbx /]# yum install -y portaudio-19 libffi-devel openssl-devel libmpg123-devel
-(env) [root@vitalpbx /]# python -m pip install --upgrade google-assistant-library==1.0.1
-(env) [root@vitalpbx /]# python -m pip install --upgrade google-assistant-sdk[samples]==0.5.1
+[root@vitalpbx /]# yum install -y portaudio-19 libffi-devel openssl-devel libmpg123-devel
+[root@vitalpbx /]# python -m pip install --upgrade google-assistant-library==1.0.1
+[root@vitalpbx /]# python -m pip install --upgrade google-assistant-sdk[samples]==0.5.1
 </pre>
 
 ## Generate credentials<br>
 <pre>
-(env) [root@vitalpbx /]# python -m pip install --upgrade google-auth-oauthlib[tool]
+[root@vitalpbx /]# python -m pip install --upgrade google-auth-oauthlib[tool]
 
-(env) [root@vitalpbx /]# google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --scope https://www.googleapis.com/auth/gcm --save --headless --client-secrets /var/lib/asterisk/client_secret_client-id.json
+[root@vitalpbx /]# google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --scope https://www.googleapis.com/auth/gcm --save --headless --client-secrets /var/lib/asterisk/client_secret_client-id.json
 </pre>
 
 You should see a URL displayed in the terminal:<br>
