@@ -30,7 +30,7 @@ Nota:<br>
 Remember. You must select the project in the top left of the page.<br>
 
 Application type: Internal<br>
-Application name: (The name of the app asking for consent)<br>
+Application name: (The name of the app asking for consent, you can leave the name by default.)<br>
 Application logo: (optional)<br>
 Support email: (Select your email)<br>
 ### Save<br>
