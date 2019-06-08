@@ -91,7 +91,7 @@ Install the package's system dependencies<br>
 <pre>
 (env) [root@vitalpbx /]# python -m pip install --upgrade google-auth-oauthlib[tool]
 
-(env) [root@vitalpbx /]# google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --scope https://www.googleapis.com/auth/gcm --save --headless --client-secrets /var/lib/asterisk/client_secret_<client-id>.json
+(env) [root@vitalpbx /]# google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --scope https://www.googleapis.com/auth/gcm --save --headless --client-secrets /var/lib/asterisk/client_secret_client-id.json
 </pre>
 
 You should see a URL displayed in the terminal:<br>
