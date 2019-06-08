@@ -32,9 +32,9 @@ Application name: (The name of the app asking for consent, you can leave the def
 Application logo: (optional)<br>
 Support email: (Select your email)<br>
 
-Save<br>
+# Save<br>
 
-Set activity controls for your account<br>
+## Set activity controls for your account<br>
 In order to use the Google Assistant, you must share certain activity data with Google. The Google Assistant needs this data to function properly; this is not specific to the SDK.<br>
 
 Open the Activity Controls page for the Google account that you want to use with the Assistant. You can use any Google account, it does not need to be your developer account.<br>
