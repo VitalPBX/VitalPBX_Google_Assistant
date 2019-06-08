@@ -123,29 +123,6 @@ Copy google.agi file<br>
 [root@vitalpbx agi-bin]# chmod +x google.agi
 </pre>
 
-## GET project-id and device-model-id<br>
-
-Goto Actions on Google<br>
-https://console.actions.google.com/u/0/<br>
-Select the project<br>
-Device Registration<br>
-Select REGISTER MODEL from the list<br>
-Copy de model ID<br>
-Now goto project settings (in the menu press the Setting Icon)<br>
-Copy the Project ID<br>
-
-Now edit the google.agi file a replace this two value<br>
-<pre>
-[root@vitalpbx agi-bin]# vi google.agi
-# Google Project ID             #
-my $projectid = "your-project-id";
-
-# Google Device Model ID        #
-my $devicemodelid = "your-device-model-id";
-
-# ----------------------------- #
-</pre>
-
 ## Load Example code<br>
 
 <pre>
