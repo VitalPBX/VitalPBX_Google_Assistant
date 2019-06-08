@@ -10,10 +10,8 @@ echo -e "************************************************************"
 echo -e "*           Welcome to the VitalPBX Assistant              *"
 echo -e "*                   Powered by Google                      *"
 echo -e "************************************************************"
-yum install -y python-devel python-virtualenv
-virtualenv env --no-site-packages
-env/bin/python -m pip install --upgrade pip setuptools wheel
-source env/bin/activate
+yum install -y python-devel python-pip
+python -m pip install --upgrade pip setuptools wheel
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*                      Get Package                         *"
@@ -32,14 +30,15 @@ echo -e "************************************************************"
 cd /var/lib/asterisk/agi-bin
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google.agi
 chown asterisk:asterisk google.agi
+chmod +x google.agi
 cd /etc/asterisk/ombutel
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/extensions__60-google_assistant.conf
 cd /var/lib/asterisk/sounds/en
-wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_another.sln
-wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_example.sln
-wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_goodbye.sln
-wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_wait.sln
-wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_welcome.sln
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_another.sln
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_example.sln
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_goodbye.sln
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_wait.sln
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_welcome.sln
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*     Create working directory and allow asterisk user     *"
@@ -50,7 +49,7 @@ echo -e "\n"
 echo -e "************************************************************"
 echo -e "*                VitalPBX Dialplan realod                   *"
 echo -e "************************************************************"
-asterisk -rx”dialplan reload”
+asterisk -rx"dialplan reload"
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*                        Finish                             *"
