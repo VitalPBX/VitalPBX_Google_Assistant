@@ -26,6 +26,8 @@ https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/
 
 6.- You must configure the OAuth consent screen for your project in the Cloud Platform Console. Note that most fields on this page are optional.<br>
 https://console.developers.google.com/apis/credentials/consent<br>
+Nota:<br>
+Remember. You must select the project in the top left of the page.<br>
 
 Application type: Internal<br>
 Application name: (The name of the app asking for consent)<br>
