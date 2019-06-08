@@ -10,7 +10,7 @@ echo -e "************************************************************"
 echo -e "*           Welcome to the VitalPBX Assistant              *"
 echo -e "*                   Powered by Google                      *"
 echo -e "************************************************************"
-while [[ $ip_master == '' ]]
+while [[ $client_secret == '' ]]
 do
     read -p "Client Secret JSon File Name... > " client_secret 
 done 
