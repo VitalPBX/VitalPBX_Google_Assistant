@@ -74,7 +74,7 @@ Copy this file (client_secret_<client-id>.json) in VitalPBX Server /var/lib/aste
 
 ## Install the SDK and Sample Code<br>
 <pre>
-[root@vitalpbx /]# yum install python-devel python-virtualenv
+[root@vitalpbx /]# yum install -y python-devel python-virtualenv
 [root@vitalpbx /]# virtualenv env --no-site-packages
 [root@vitalpbx /]# env/bin/python -m pip install --upgrade pip setuptools wheel
 [root@vitalpbx /]# source env/bin/activate
@@ -82,7 +82,7 @@ Copy this file (client_secret_<client-id>.json) in VitalPBX Server /var/lib/aste
 
 Install the package's system dependencies<br>
 <pre>
-(env) [root@vitalpbx /]# yum install portaudio-19 libffi-devel openssl-devel libmpg123-devel
+(env) [root@vitalpbx /]# yum install -y portaudio-19 libffi-devel openssl-devel libmpg123-devel
 (env) [root@vitalpbx /]# python -m pip install --upgrade google-assistant-library==1.0.1
 (env) [root@vitalpbx /]# python -m pip install --upgrade google-assistant-sdk[samples]==0.5.1
 </pre>
