@@ -31,7 +31,6 @@ Application type: Internal<br>
 Application name: (The name of the app asking for consent, you can leave the default name)<br>
 Application logo: (optional)<br>
 Support email: (Select your email)<br>
-
 ### Save<br>
 
 ## Set activity controls for your account<br>
