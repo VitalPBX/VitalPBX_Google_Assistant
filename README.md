@@ -28,7 +28,7 @@ https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/
 https://console.developers.google.com/apis/credentials/consent<br>
 
 Application type: Internal<br>
-Application name: (The name of the app asking for consent, you can leave the default name)<br>
+Application name: (The name of the app asking for consent)<br>
 Application logo: (optional)<br>
 Support email: (Select your email)<br>
 ### Save<br>
