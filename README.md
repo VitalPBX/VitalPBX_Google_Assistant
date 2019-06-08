@@ -70,17 +70,17 @@ Copy this file (client_secret_<client-id>.json) in VitalPBX Server /var/lib/aste
 
 ## Install the SDK and Sample Code<br>
 <pre>
-[root@vitalpbx /]# yum install python-devel python-virtualenv<br>
-[root@vitalpbx /]# virtualenv env --no-site-packages<br>
-[root@vitalpbx /]# env/bin/python -m pip install --upgrade pip setuptools wheel<br>
-[root@vitalpbx /]# source env/bin/activate<br>
+[root@vitalpbx /]# yum install python-devel python-virtualenv
+[root@vitalpbx /]# virtualenv env --no-site-packages
+[root@vitalpbx /]# env/bin/python -m pip install --upgrade pip setuptools wheel
+[root@vitalpbx /]# source env/bin/activate
 </pre>
 
 Install the package's system dependencies<br>
 <pre>
-(env) [root@vitalpbx /]# yum install portaudio-19 libffi-devel openssl-devel libmpg123-devel<br>
-(env) [root@vitalpbx /]# python -m pip install --upgrade google-assistant-library==1.0.1<br>
-(env) [root@vitalpbx /]# python -m pip install --upgrade google-assistant-sdk[samples]==0.5.1<br>
+(env) [root@vitalpbx /]# yum install portaudio-19 libffi-devel openssl-devel libmpg123-devel
+(env) [root@vitalpbx /]# python -m pip install --upgrade google-assistant-library==1.0.1
+(env) [root@vitalpbx /]# python -m pip install --upgrade google-assistant-sdk[samples]==0.5.1
 </pre>
 
 ## Generate credentials<br>
@@ -106,16 +106,16 @@ credentials saved: /root/.config/google-oauthlib-tool/credentials.json<br>
 
 Move the credential file to /var/lib/asterisk/:<br>
 <pre>
-[root@vitalpbx /]# mv /root/.config/google-oauthlib-tool/credentials.json /var/lib/asterisk/<br>
+[root@vitalpbx /]# mv /root/.config/google-oauthlib-tool/credentials.json /var/lib/asterisk/
 </pre>
 
 ## Run the Sample Code<br>
 
 Copy google.agi file<br>
 <pre>
-[root@vitalpbx /]# cd /var/lib/asterisk/agi-bin<br>
-[root@vitalpbx agi-bin]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google.agi<br>
-[root@vitalpbx agi-bin]# chown asterisk:asterisk google.agi<br>
+[root@vitalpbx /]# cd /var/lib/asterisk/agi-bin
+[root@vitalpbx agi-bin]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google.agi
+[root@vitalpbx agi-bin]# chown asterisk:asterisk google.agi
 </pre>
 
 ## GET project-id and device-model-id<br>
@@ -131,30 +131,30 @@ Copy the Project ID<br>
 
 Now edit the google.agi file a replace this two value<br>
 <pre>
-[root@vitalpbx agi-bin]# vi google.agi<br>
-# Google Project ID             #<br>
-my $projectid = "your-project-id";<br>
-<br>
-# Google Device Model ID        #<br>
-my $devicemodelid = "your-device-model-id";<br>
+[root@vitalpbx agi-bin]# vi google.agi
+# Google Project ID             #
+my $projectid = "your-project-id";
 
-# ----------------------------- #<br>
+# Google Device Model ID        #
+my $devicemodelid = "your-device-model-id";
+
+# ----------------------------- #
 </pre>
 
 ## Load Example code<br>
 
 <pre>
-[root@vitalpbx ]#  cd /etc/asterisk/ombutel<br>
-[root@vitalpbx agi-bin]#  wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/extensions__60-google_assistant.conf<br>
-[root@vitalpbx agi-bin]#  asterisk -rx”dialplan reload”<br>
-[root@vitalpbx ]#  cd /var/lib/asterisk/sounds/en<br>
-[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_another.sln<br>
-[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_example.sln<br>
-[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_goodbye.sln<br>
-[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_wait.sln<br>
-[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_welcome.sln<br>
-[root@vitalpbx agi-bin]# mkdir /var/lib/asterisk/.config/<br>
-[root@vitalpbx agi-bin]# chown asterisk:asterisk /var/lib/asterisk/.config/<br>
+[root@vitalpbx ]#  cd /etc/asterisk/ombutel
+[root@vitalpbx agi-bin]#  wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/extensions__60-google_assistant.conf
+[root@vitalpbx agi-bin]#  asterisk -rx”dialplan reload”
+[root@vitalpbx ]#  cd /var/lib/asterisk/sounds/en
+[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_another.sln
+[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_example.sln
+[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_goodbye.sln
+[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_wait.sln
+[root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_welcome.sln
+[root@vitalpbx agi-bin]# mkdir /var/lib/asterisk/.config/
+[root@vitalpbx agi-bin]# chown asterisk:asterisk /var/lib/asterisk/.config/
 </pre>
 
 ## Test your installation<br>
