@@ -32,6 +32,7 @@ echo -e "*                    in the web browser                    *"
 echo -e "************************************************************"
 python -m pip install --upgrade google-auth-oauthlib[tool]
 google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --scope https://www.googleapis.com/auth/gcm --save --headless --client-secrets /var/lib/asterisk/$client_secret
+mv /root/.config/google-oauthlib-tool/credentials.json /var/lib/asterisk/
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*                        Copy Files                        *"
