@@ -26,6 +26,9 @@ python -m pip install --upgrade google-assistant-sdk[samples]==0.5.1
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*                 Generate credentials                     *"
+echo -e "*      Copy a paste the name of he client secret file      *"
+echo -e "*  And wait for the verification device URL a paste this   *"
+echo -e "*                    in the web browser                    *"
 echo -e "************************************************************"
 python -m pip install --upgrade google-auth-oauthlib[tool]
 google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --scope https://www.googleapis.com/auth/gcm --save --headless --client-secrets /var/lib/asterisk/$client_secret
