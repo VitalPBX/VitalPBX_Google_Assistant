@@ -42,9 +42,7 @@ https://myaccount.google.com/activitycontrols<br>
 Ensure the following toggle switches are enabled (blue):<br>
 <li>
 Web & App Activity<br>
-<li>
 In addition, be sure to select the Include Chrome history and activity from sites, apps, and devices that use Google services           checkbox.<br>
-</li>
 </li>
 <li>
 Device Information<br>
@@ -52,6 +50,7 @@ Device Information<br>
 <li>
 Voice & Audio Activity<br>
 </li>
+
 ## Register the Device Model<br>
 
 Use the registration UI<br>
