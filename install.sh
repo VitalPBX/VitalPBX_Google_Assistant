@@ -10,6 +10,10 @@ echo -e "************************************************************"
 echo -e "*           Welcome to the VitalPBX Assistant              *"
 echo -e "*                   Powered by Google                      *"
 echo -e "************************************************************"
+while [[ $ip_master == '' ]]
+do
+    read -p "Client Secret JSon File Name... > " client_secret 
+done 
 yum install -y python-devel python-pip
 python -m pip install --upgrade pip setuptools wheel
 echo -e "\n"
