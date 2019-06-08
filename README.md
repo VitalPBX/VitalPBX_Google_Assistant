@@ -69,21 +69,26 @@ Later, you will specify the different abilities that your device supports on thi
 Copy this file (client_secret_<client-id>.json) in VitalPBX Server /var/lib/asterisk<br>
 
 ## Install the SDK and Sample Code<br>
+<pre>
 [root@vitalpbx /]# yum install python-devel python-virtualenv<br>
 [root@vitalpbx /]# virtualenv env --no-site-packages<br>
 [root@vitalpbx /]# env/bin/python -m pip install --upgrade pip setuptools wheel<br>
 [root@vitalpbx /]# source env/bin/activate<br>
+</pre>
 
 Install the package's system dependencies<br>
+<pre>
 (env) [root@vitalpbx /]# yum install portaudio-19 libffi-devel openssl-devel libmpg123-devel<br>
 (env) [root@vitalpbx /]# python -m pip install --upgrade google-assistant-library==1.0.1<br>
 (env) [root@vitalpbx /]# python -m pip install --upgrade google-assistant-sdk[samples]==0.5.1<br>
+</pre>
 
 ## Generate credentials<br>
-
+<pre>
 (env) [root@vitalpbx /]# python -m pip install --upgrade google-auth-oauthlib[tool]<br>
 
 (env) [root@vitalpbx /]# google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --scope https://www.googleapis.com/auth/gcm --save --headless --client-secrets /var/lib/asterisk/client_secret_<client-id>.json<br>
+</pre>
 
 You should see a URL displayed in the terminal:<br>
 
@@ -100,14 +105,18 @@ If authorization was successful, you will see a response similar to the followin
 credentials saved: /root/.config/google-oauthlib-tool/credentials.json<br>
 
 Move the credential file to /var/lib/asterisk/:<br>
-mv /root/.config/google-oauthlib-tool/credentials.json /var/lib/asterisk/<br>
+<pre>
+[root@vitalpbx /]# mv /root/.config/google-oauthlib-tool/credentials.json /var/lib/asterisk/<br>
+</pre>
 
 ## Run the Sample Code<br>
 
 Copy google.agi file<br>
+<pre>
 [root@vitalpbx /]# cd /var/lib/asterisk/agi-bin<br>
 [root@vitalpbx agi-bin]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google.agi<br>
 [root@vitalpbx agi-bin]# chown asterisk:asterisk google.agi<br>
+</pre>
 
 ## GET project-id and device-model-id<br>
 
@@ -121,6 +130,7 @@ Now goto project settings (in the menu press the Setting Icon)<br>
 Copy the Project ID<br>
 
 Now edit the google.agi file a replace this two value<br>
+<pre>
 [root@vitalpbx agi-bin]# vi google.agi<br>
 # Google Project ID             #<br>
 my $projectid = "your-project-id";<br>
@@ -129,9 +139,11 @@ my $projectid = "your-project-id";<br>
 my $devicemodelid = "your-device-model-id";<br>
 
 # ----------------------------- #<br>
+</pre>
 
 ## Load Example code<br>
 
+<pre>
 [root@vitalpbx ]#  cd /etc/asterisk/ombutel<br>
 [root@vitalpbx agi-bin]#  wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/extensions__60-google_assistant.conf<br>
 [root@vitalpbx agi-bin]#  asterisk -rx”dialplan reload”<br>
@@ -143,6 +155,7 @@ my $devicemodelid = "your-device-model-id";<br>
 [root@vitalpbx en]# wget https://github.com/VitalPBX/VitalPBX_Google_Assistant/blob/master/google_welcome.sln<br>
 [root@vitalpbx agi-bin]# mkdir /var/lib/asterisk/.config/<br>
 [root@vitalpbx agi-bin]# chown asterisk:asterisk /var/lib/asterisk/.config/<br>
+</pre>
 
 ## Test your installation<br>
 From any phone in you PBX dial: *789<br>
