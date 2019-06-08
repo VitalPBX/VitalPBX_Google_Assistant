@@ -17,7 +17,7 @@ https://console.actions.google.com/
 
 3.- To create a new project, type a name in the Project name box and click CREATE PROJECT.<br>
 
-4.- If you created a new project, click the Device registration box near the bottom of the page. If you imported a previously-created project, this box will not be displayed; select the Device registration tab (under ADVANCED OPTIONS) from the left navbar.<br>
+4.- Click the Device registration box near the bottom of the page. If you imported a previously-created project, this box will not be displayed; select the Device registration tab (under ADVANCED OPTIONS) from the left navbar.<br>
 
 Keep this browser tab open. You will use it to register a device model in a later step.<br>
 
