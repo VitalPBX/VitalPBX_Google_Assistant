@@ -35,6 +35,12 @@ my $intkey = "#";
 # Verbose debugging messages    #
 my $debug = 0;
 
+# Google Project ID             #
+my $projectid = "my-project-id";
+
+# Google Device Model ID        #
+my $devicemodelid = "my-device-model";
+
 # ----------------------------- #
 
 my %AGI;
@@ -143,7 +149,7 @@ my $status = qx/$cmd/;
 console_log ("Calling gRPC $command") if ($debug);
 my $v = "";
 $v = "-v" if ($debug);
-my $cmd = "${command} --credentials ${api_json_file} -i ${tmpname}_in.wav -o ${tmpname}_out.wav ${v}";
+my $cmd = "${command} --project-id ${projectid} --device-model-id ${devicemodelid} --credentials ${api_json_file} -i ${tmpname}_in.wav -o ${tmpname}_out.wav ${v}";
 console_log ("CMD: $cmd") if ($debug);
 $status = qx/$cmd/;
 console_log ("Got gRPC API response.") if ($debug);
