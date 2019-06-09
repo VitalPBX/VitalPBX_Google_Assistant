@@ -68,11 +68,11 @@ See the device model JSON reference for more information on these fields.<br>
 
 When you are finished, click REGISTER MODEL.<br>
 
-Download client_secret_<client-id>.json. Click NEXT.<br>
+Download client_secret_client_ClientID.json. Click NEXT.<br>
 
 Later, you will specify the different abilities that your device supports on this screen. But for now, click the SKIP button.<br>
 
-Copy this file (client_secret_<client-id>.json) in VitalPBX Server /var/lib/asterisk<br>
+Copy this file (client_secret_client_ClientID.json) in VitalPBX Server /var/lib/asterisk<br>
 
 ## Install the SDK and Sample Code<br>
 <pre>
@@ -88,10 +88,11 @@ Install the package's system dependencies<br>
 </pre>
 
 ## Generate credentials<br>
+Remember. You must replace at the end of the registry the full name of client_secret_client_ClientID.json that we previously copied to /var/lib/asterisk
 <pre>
 [root@vitalpbx /]# python -m pip install --upgrade google-auth-oauthlib[tool]
 
-[root@vitalpbx /]# google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --scope https://www.googleapis.com/auth/gcm --save --headless --client-secrets /var/lib/asterisk/client_secret_client-id.json
+[root@vitalpbx /]# google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --scope https://www.googleapis.com/auth/gcm --save --headless --client-secrets /var/lib/asterisk/client_secret_client_ClientID.json
 </pre>
 
 You should see a URL displayed in the terminal:<br>
