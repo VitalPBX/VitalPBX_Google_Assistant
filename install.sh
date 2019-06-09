@@ -35,10 +35,13 @@ echo -e "\n"
 echo -e "************************************************************"
 echo -e "*                 Generate credentials                     *"
 echo -e "*      Copy a paste the name of he client secret file      *"
-echo -e "*  And wait for the verification device URL a paste this   *"
-echo -e "*                    in the web browser                    *"
 echo -e "************************************************************"
 python -m pip install --upgrade google-auth-oauthlib[tool]
+echo -e "\n"
+echo -e "************************************************************"
+echo -e "*     Wait for the verification device URL a paste this    *"
+echo -e "*                    in the web browser                    *"
+echo -e "************************************************************"
 google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --scope https://www.googleapis.com/auth/gcm --save --headless --client-secrets /var/lib/asterisk/$client_secret
 mv /root/.config/google-oauthlib-tool/credentials.json /var/lib/asterisk/
 echo -e "\n"
@@ -49,6 +52,8 @@ cd /var/lib/asterisk/agi-bin
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google.agi
 chown asterisk:asterisk google.agi
 chmod +x google.agi
+sed -i 's/my-project-id/$project_id/g' /var/lib/asterisk/agi-bin/google.agi
+sed -i 's/my-device-model/$model_id/g' /var/lib/asterisk/agi-bin/google.agi
 cd /etc/asterisk/ombutel
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/extensions__60-google_assistant.conf
 cd /var/lib/asterisk/sounds/en
@@ -73,6 +78,5 @@ asterisk -rx"dialplan reload"
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*                        Finish                             *"
-echo -e "*          Now force to create device_config.json           *"
+echo -e "*                 Please dial *789 for test                 *"
 echo -e "************************************************************"
-googlesamples-assistant-pushtotalk --project-id $project_id --device-model-id $model_id --credentials /var/lib/asterisk/credentials.json -i /tmp/in.wav -o out.wav -v
