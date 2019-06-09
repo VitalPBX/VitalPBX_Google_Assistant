@@ -6,7 +6,7 @@ Below we will show step by step how to integrate Google Assistant in VitalPBX. F
 ## Requirements<br>
 <li>client_secret_client_ClientID.json</li>
 <li>Project ID</li>
-<li>Device Model Id</li><br>
+<li>Device Model ID</li><br>
 
 To obtain these three requirements the following is necessary<br>
 
