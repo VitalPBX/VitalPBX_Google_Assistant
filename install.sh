@@ -57,6 +57,8 @@ wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_goodbye.sln
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_wait.sln
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_welcome.sln
+cd /tmp
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/in.wav
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*     Create working directory and allow asterisk user     *"
