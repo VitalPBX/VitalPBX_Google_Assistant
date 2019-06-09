@@ -125,7 +125,7 @@ Copy the Project ID<br>
 Now in the left Menu, Advanced Options, select Device Registration<br>
 Double click in product and copy the Model ID<br>
 
-## Run the Sample Code<br>
+## Get the AGI file and configure<br>
 
 Copy google.agi file<br>
 <pre>
@@ -146,7 +146,7 @@ my $projectid = "my-project-id";
 my $devicemodelid = "my-device-model";
 </pre>
 
-## Load Example code<br>
+## Get the example code<br>
 
 <pre>
 [root@vitalpbx ]#  cd /etc/asterisk/ombutel
