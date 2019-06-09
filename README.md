@@ -169,7 +169,7 @@ my $devicemodelid = "my-device-model";
 ## Test your installation<br>
 From any phone in you PBX dial: *789<br>
 
-## Install with install.sh
+#### Easy Install with install.sh
 
 Get this three Requirements<br>
 <li>client_secret_client_ClientID.json</li>
