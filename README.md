@@ -4,12 +4,14 @@ VitalPBX Assistant, Powered by Google
 Below we will show step by step how to integrate Google Assistant in VitalPBX. For this integration, a little technical knowledge and an account in Google Cloud is required to access the Google Assistant API.
 
 ## Requirements<br>
-client_secret_client-id.json<br>
+<li>client_secret_client-id.json</li><br>
+<li>Project ID</li>
+<li>Device Model Id</li>
 
 To obtain these three requirements the following is necessary<br>
 
 1.- Open the Actions Console.<br>
-https://console.actions.google.com/
+https://console.actions.google.com/<br>
 
 2.- Click on Add/import project.<br>
 
@@ -111,6 +113,17 @@ Move the credential file to /var/lib/asterisk/:<br>
 [root@vitalpbx /]# mv /root/.config/google-oauthlib-tool/credentials.json /var/lib/asterisk/
 </pre>
 
+## Get Project ID and Device Model ID<br>
+Goto:<br>
+https://console.actions.google.com/<br>
+Select the project<br>
+In the upper left next to Overview press the Settings button<br>
+Select Project Settins<br>
+Copy the Project ID<br>
+
+Now in the left Menu, Advanced Options, select Device Registration<br>
+Double click in product and copy the Model ID<br>
+
 ## Run the Sample Code<br>
 
 Copy google.agi file<br>
@@ -119,6 +132,17 @@ Copy google.agi file<br>
 [root@vitalpbx agi-bin]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google.agi
 [root@vitalpbx agi-bin]# chown asterisk:asterisk google.agi
 [root@vitalpbx agi-bin]# chmod +x google.agi
+</pre>
+Edit the google.agi a replace my-project-id and my-device-model <br>
+
+<pre>
+[root@vitalpbx agi-bin]# vi google.agi
+
+# Google Project ID             #
+my $projectid = "my-project-id";
+
+# Google Device Model ID        #
+my $devicemodelid = "my-device-model";
 </pre>
 
 ## Load Example code<br>
@@ -139,17 +163,3 @@ Copy google.agi file<br>
 
 ## Test your installation<br>
 From any phone in you PBX dial: *789<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
