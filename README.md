@@ -168,3 +168,7 @@ my $devicemodelid = "my-device-model";
 
 ## Test your installation<br>
 From any phone in you PBX dial: *789<br>
+
+Install with install.sh
+===
+
