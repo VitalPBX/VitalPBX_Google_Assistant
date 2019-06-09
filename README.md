@@ -195,3 +195,8 @@ Device Model ID................ > Device Model Id
 
 ## Test your installation<br>
 From any phone in you PBX dial: *789<br>
+
+## Sources of some Information<br>
+https://github.com/rgrokett/RaspiAsteriskGoogle
+https://developers.google.com/assistant/sdk/guides/service/python/
+
