@@ -4,7 +4,7 @@ VitalPBX Assistant, Powered by Google
 Below we will show step by step how to integrate Google Assistant in VitalPBX. For this integration, a little technical knowledge and an account in Google Cloud is required to access the Google Assistant API.
 
 ## Requirements<br>
-<li>client_secret_client-id.json</li><br>
+<li>client_secret_client-id.json</li>
 <li>Project ID</li>
 <li>Device Model Id</li>
 
