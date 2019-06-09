@@ -13,7 +13,15 @@ echo -e "************************************************************"
 while [[ $client_secret == '' ]]
 do
     read -p "Client Secret JSon File Name... > " client_secret 
-done 
+done
+while [[ $project_id == '' ]]
+do
+    read -p "Project ID..................... > " project_id 
+done
+while [[ $model_id == '' ]]
+do
+    read -p "Device Model ID................ > " model_id 
+done
 yum install -y python-devel python-pip
 python -m pip install --upgrade pip setuptools wheel
 echo -e "\n"
@@ -63,5 +71,6 @@ asterisk -rx"dialplan reload"
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*                        Finish                             *"
-echo -e "*       Now continue with manual configurations             *"
+echo -e "*          Now force to create device_config.json           *"
 echo -e "************************************************************"
+googlesamples-assistant-pushtotalk --project-id $project_id --device-model-id $model_id --credentials /var/lib/asterisk/credentials.json -i /tmp/in.wav -o out.wav -v
