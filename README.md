@@ -114,6 +114,12 @@ Move the credential file to /var/lib/asterisk/:<br>
 [root@vitalpbx /]# mv /root/.config/google-oauthlib-tool/credentials.json /var/lib/asterisk/
 </pre>
 
+Create working directory<br>
+<pre>
+[root@vitalpbx en]# mkdir /var/lib/asterisk/.config/
+[root@vitalpbx en]# chown asterisk:asterisk /var/lib/asterisk/.config/
+</pre>
+
 ## Get Project ID and Device Model ID<br>
 Goto:<br>
 https://console.actions.google.com/<br>
@@ -158,8 +164,6 @@ my $devicemodelid = "my-device-model";
 [root@vitalpbx en]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_goodbye.sln
 [root@vitalpbx en]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_wait.sln
 [root@vitalpbx en]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_welcome.sln
-[root@vitalpbx en]# mkdir /var/lib/asterisk/.config/
-[root@vitalpbx en]# chown asterisk:asterisk /var/lib/asterisk/.config/
 </pre>
 
 ## Test your installation<br>
