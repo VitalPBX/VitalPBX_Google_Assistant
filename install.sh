@@ -52,8 +52,8 @@ cd /var/lib/asterisk/agi-bin
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google.agi
 chown asterisk:asterisk google.agi
 chmod +x google.agi
-sed -i 's/my-project-id/$project_id/g' /var/lib/asterisk/agi-bin/google.agi
-sed -i 's/my-device-model/$model_id/g' /var/lib/asterisk/agi-bin/google.agi
+sed -i 's/my-project-id/'$project_id'/g' /var/lib/asterisk/agi-bin/google.agi
+sed -i 's/my-device-model/'$model_id'/g' /var/lib/asterisk/agi-bin/google.agi
 cd /etc/asterisk/ombutel
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/extensions__60-google_assistant.conf
 cd /var/lib/asterisk/sounds/en
@@ -62,8 +62,6 @@ wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_goodbye.sln
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_wait.sln
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/google_welcome.sln
-cd /tmp
-wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/in.wav
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*     Create working directory and allow asterisk user     *"
