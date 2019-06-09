@@ -4,7 +4,7 @@ VitalPBX Assistant, Powered by Google
 Below we will show step by step how to integrate Google Assistant in VitalPBX. For this integration, a little technical knowledge and an account in Google Cloud is required to access the Google Assistant API.
 
 ## Requirements<br>
-<li>client_secret_client-id.json</li>
+<li>client_secret_client_ClientID.json</li>
 <li>Project ID</li>
 <li>Device Model Id</li><br>
 
@@ -169,6 +169,29 @@ my $devicemodelid = "my-device-model";
 ## Test your installation<br>
 From any phone in you PBX dial: *789<br>
 
-Install with install.sh
-===
+## Install with install.sh
 
+Get this three Requirements<br>
+<li>client_secret_client_ClientID.json</li>
+<li>Project ID</li>
+<li>Device Model Id</li><br>
+
+Copy this file (client_secret_client_ClientID.json) in VitalPBX Server /var/lib/asterisk<br>
+
+Download the instal.sh file, give it permissions, execute it and fill in the requested fields with the previously used information
+<pre>
+[root@vitalpbx ]# wget https://raw.githubusercontent.com/VitalPBX/VitalPBX_Google_Assistant/master/install.sh
+[root@vitalpbx ]# chmod +x install.sh
+[root@vitalpbx ]# ./install.sh
+
+************************************************************
+*           Welcome to the VitalPBX Assistant              *
+*                   Powered by Google                      *
+************************************************************
+Client Secret JSon File Name... > client_secret_client_ClientID.json
+Project ID..................... > Project ID
+Device Model ID................ > Device Model Id
+</pre>
+
+## Test your installation<br>
+From any phone in you PBX dial: *789<br>
