@@ -197,6 +197,6 @@ Device Model ID................ > Device Model Id
 From any phone in you PBX dial: *789<br>
 
 ## Sources of some Information<br>
-https://github.com/rgrokett/RaspiAsteriskGoogle
+https://github.com/rgrokett/RaspiAsteriskGoogle<br>
 https://developers.google.com/assistant/sdk/guides/service/python/
 
